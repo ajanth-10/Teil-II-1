@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemischter Testmodus</title>
+  <link rel="stylesheet" href="mixed.css"/>
+</head>
+<body>
+  <header class="exam-header">
+    <div>
+      <p class="eyebrow">Zwischentest-Training</p>
+      <h1>Gemischter Testmodus</h1>
+      <p>
+        Aufgaben gemischt aus allen fünf Dossiers. Die Form orientiert sich an typischen Testfragen:
+        kurze Begriffe bestimmen, Satzglieder markieren, Objekte klassifizieren, Satzverknüpfung analysieren
+        und topologische Felder einordnen.
+      </p>
+    </div>
+    <div class="score">
+      <span>Punktzahl</span>
+      <strong id="score">0 / 0</strong>
+      <small id="progress">Noch nichts korrigiert</small>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="all" class="primary">Alle Aufgaben anzeigen</button>
+      <button id="shuffle" class="secondary">10 zufällige Aufgaben</button>
+      <button id="resetAll" class="ghost">Alles zurücksetzen</button>
+    </section>
+
+    <section class="exam-note">
+      <h2>Consigne</h2>
+      <p>
+        Réponds comme dans le test : sois précis. Par exemple, n’écris pas seulement
+        « Objekt », mais « Akkusativobjekt », « Präpositionalobjekt », etc. Pour les pronoms,
+        indique la sous-catégorie quand c’est demandé.
+      </p>
+    </section>
+
+    <section id="exercise-list"></section>
+  </main>
+
+  <template id="tpl">
+    <article class="exercise">
+      <div class="head">
+        <div>
+          <p class="tag"></p>
+          <h3></h3>
+        </div>
+        <span class="pill"></span>
+      </div>
+      <p class="question"></p>
+      <div class="body"></div>
+      <div class="actions">
+        <button class="primary check">Korrigieren</button>
+        <button class="secondary reset">Neu beginnen</button>
+        <button class="ghost solution">Lösung anzeigen</button>
+      </div>
+      <div class="feedback"></div>
+    </article>
+  </template>
+
+  <script src="mixed.js"></script>
+</body>
+</html>

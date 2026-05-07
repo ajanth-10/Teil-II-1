@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deutschtraining — Syntax IV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Einführung in die germanistische Linguistik II</p>
+      <h1>Übungsseite — Syntax IV</h1>
+      <p class="subtitle">
+        Interaktive Übungen zu Attributen innerhalb von Satzgliedern, Satzklammer,
+        topologischen Feldern, Verbstellungstypen und Satztypen.
+      </p>
+    </div>
+    <div class="score-card">
+      <span>Punktzahl</span>
+      <strong id="global-score">0 / 0</strong>
+      <small id="progress-text">Noch keine Übung korrigiert</small>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <button class="nav-btn active" data-section="intro">Methode</button>
+      <button class="nav-btn" data-section="wiederholung">Wiederholung</button>
+      <button class="nav-btn" data-section="satzglieder">Satzglieder</button>
+      <button class="nav-btn" data-section="attribute">Attribute</button>
+      <button class="nav-btn" data-section="verschachtelung">Attribute in Attributen</button>
+      <button class="nav-btn" data-section="satzklammer">Satzklammer</button>
+      <button class="nav-btn" data-section="felder">Topologische Felder</button>
+      <button class="nav-btn" data-section="verbstellung">Verbstellung</button>
+      <button class="nav-btn" data-section="satztypen">Satztypen</button>
+      <button class="nav-btn" data-section="analyse">Topologische Analyse</button>
+      <button class="nav-btn" data-section="revision">Schlussrevision</button>
+
+      <div class="tips">
+        <h3>Verbenhilfe</h3>
+        <p>Die deutschen Verben können angezeigt werden. Die französische Bedeutung steht versteckt in Klammern.</p>
+        <button class="secondary full" id="toggle-verbs">Verben anzeigen</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section id="intro" class="page-section visible">
+        <article class="panel">
+          <h2>Ziel</h2>
+          <p>
+            Diese Website nimmt die Übungen aus Sitzung 4 auf und macht daraus ein Training.
+            Die Seite bleibt auf Deutsch. Französische Übersetzungen wichtiger Verben sind
+            nur als Hilfe versteckt.
+          </p>
+          <div class="method-grid">
+            <div>
+              <h3>Attribut</h3>
+              <p>Ein Attribut ist Teil eines Satzglieds. Es kann verschiedene Formen haben: Adjektiv-, Genitiv-, Präpositionalattribut oder Attributsatz.</p>
+            </div>
+            <div>
+              <h3>Satzklammer</h3>
+              <p>Links steht das finite Verb, rechts steht der infinite Verbteil oder die Verbpartikel.</p>
+            </div>
+            <div>
+              <h3>Feldermodell</h3>
+              <p>Vorfeld, linke Klammer, Mittelfeld, rechte Klammer und Nachfeld strukturieren den deutschen Satz.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel verb-panel hidden" id="verb-panel">
+          <h2>Verbenhilfe <span class="small-fr">(traductions françaises cachées)</span></h2>
+          <div id="verb-list" class="verb-list"></div>
+        </article>
+      </section>
+
+      <section id="wiederholung" class="page-section"></section>
+      <section id="satzglieder" class="page-section"></section>
+      <section id="attribute" class="page-section"></section>
+      <section id="verschachtelung" class="page-section"></section>
+      <section id="satzklammer" class="page-section"></section>
+      <section id="felder" class="page-section"></section>
+      <section id="verbstellung" class="page-section"></section>
+      <section id="satztypen" class="page-section"></section>
+      <section id="analyse" class="page-section"></section>
+      <section id="revision" class="page-section"></section>
+    </section>
+  </main>
+
+  <template id="exercise-template">
+    <article class="exercise-card">
+      <div class="exercise-head">
+        <div>
+          <p class="tag"></p>
+          <h3></h3>
+        </div>
+        <span class="type-pill"></span>
+      </div>
+      <p class="question"></p>
+      <div class="exercise-body"></div>
+      <div class="actions">
+        <button class="primary check-btn">Korrigieren</button>
+        <button class="secondary reset-btn">Neu beginnen</button>
+        <button class="ghost solution-btn">Lösung anzeigen</button>
+      </div>
+      <div class="feedback"></div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

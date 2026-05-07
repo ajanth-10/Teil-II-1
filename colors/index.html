@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syntaxtraining — Gesamtkurs</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav">
+      <div class="brand" data-view="home">
+        <span class="brand-mark">S</span>
+        <div>
+          <strong>Syntaxtraining</strong>
+          <small>Germanistische Linguistik II</small>
+        </div>
+      </div>
+
+      <div class="nav-scroll" aria-label="Navigation principale">
+        <button class="nav-chip active" data-view="home">Start</button>
+        <button class="nav-chip" data-view="modules/syntax_i/index.html">Syntax I</button>
+        <button class="nav-chip" data-view="modules/syntax_ii/index.html">Syntax II</button>
+        <button class="nav-chip" data-view="modules/syntax_iii/index.html">Syntax III</button>
+        <button class="nav-chip" data-view="modules/syntax_iv/index.html">Syntax IV</button>
+        <button class="nav-chip" data-view="modules/syntax_v/index.html">Syntax V</button>
+        <button class="nav-chip exam" data-view="mixed.html">Test mélangé</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Einführung in die germanistische Linguistik II</p>
+        <h1>Un seul site pour tout réviser</h1>
+        <p class="subtitle">
+          Les cinq dossiers sont intégrés dans une interface unique. Utilise les modules pour revoir
+          un chapitre précis, puis passe au mode mélangé pour t’entraîner comme au Zwischentest.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <span>Actuellement</span>
+        <strong id="current-mode">Startseite</strong>
+        <small>Navigation fixe en haut · modules intégrés · test mélangé</small>
+      </div>
+    </section>
+  </header>
+
+  <main class="workspace">
+    <section id="home" class="home visible">
+      <article class="intro-card">
+        <div>
+          <p class="section-kicker">Plan de travail</p>
+          <h2>Choisis un dossier ou lance le mode mélangé</h2>
+          <p>
+            L’objectif est de t’éviter de jongler entre plusieurs dossiers. Chaque carte ouvre le site
+            correspondant directement dans cette page. Le mode mélangé reprend les types de questions
+            visibles sur ton test corrigé : catégories de mots, fonctions, objets, particules,
+            Satzverknüpfung et topologische Analyse.
+          </p>
+        </div>
+        <button class="big-cta" data-view="mixed.html">Commencer le test mélangé</button>
+      </article>
+
+      <section class="module-grid">
+        <button class="module-card" data-view="modules/syntax_i/index.html">
+          <span class="number">01</span>
+          <h3>Syntax I</h3>
+          <p>Wortarten, Substantive, Adjektive, Pronomen, Verben, Passiv, Modalverben.</p>
+          <em>Ouvrir le dossier</em>
+        </button>
+
+        <button class="module-card" data-view="modules/syntax_ii/index.html">
+          <span class="number">02</span>
+          <h3>Syntax II</h3>
+          <p>Adverbien, Adpositionen, Konjunktionen, Partikeln, Phrasen, Konstituenten.</p>
+          <em>Ouvrir le dossier</em>
+        </button>
+
+        <button class="module-card" data-view="modules/syntax_iii/index.html">
+          <span class="number">03</span>
+          <h3>Syntax III</h3>
+          <p>Satzglieder, Objekte, Adverbiale, Prädikative, Valenz, Angaben.</p>
+          <em>Ouvrir le dossier</em>
+        </button>
+
+        <button class="module-card" data-view="modules/syntax_iv/index.html">
+          <span class="number">04</span>
+          <h3>Syntax IV</h3>
+          <p>Attribute, Satzklammer, topologische Felder, Verbstellung, Satztypen.</p>
+          <em>Ouvrir le dossier</em>
+        </button>
+
+        <button class="module-card" data-view="modules/syntax_v/index.html">
+          <span class="number">05</span>
+          <h3>Syntax V</h3>
+          <p>Komplexe Sätze, Parataxe, Hypotaxe, Nebensatzformen und -funktionen.</p>
+          <em>Ouvrir le dossier</em>
+        </button>
+
+        <button class="module-card test-card" data-view="mixed.html">
+          <span class="number">TEST</span>
+          <h3>Gemischter Testmodus</h3>
+          <p>Entraînement mélangé inspiré des questions de ton Zwischentest.</p>
+          <em>Lancer l’entraînement</em>
+        </button>
+      </section>
+    </section>
+
+    <section class="viewer-shell" id="viewer-shell">
+      <div class="viewer-toolbar">
+        <div>
+          <p class="section-kicker">Module ouvert</p>
+          <h2 id="viewer-title">Syntaxtraining</h2>
+        </div>
+        <button class="toolbar-button" data-view="home">Retour au tableau de bord</button>
+      </div>
+      <iframe id="viewer" class="viewer" title="Syntaxtraining"></iframe>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

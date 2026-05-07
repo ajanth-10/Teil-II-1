@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deutschtraining — Syntax III</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Einführung in die germanistische Linguistik II</p>
+      <h1>Übungsseite — Syntax III</h1>
+      <p class="subtitle">
+        Interaktive Übungen zu Konstituentenstruktur, Satzgliedern, Subjekt, Objektarten,
+        Adverbialen, Prädikativen, Valenz, Ergänzungen, freien Angaben und Attributen.
+      </p>
+    </div>
+    <div class="score-card">
+      <span>Punktzahl</span>
+      <strong id="global-score">0 / 0</strong>
+      <small id="progress-text">Noch keine Übung korrigiert</small>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <button class="nav-btn active" data-section="intro">Methode</button>
+      <button class="nav-btn" data-section="satzglied">Satzglied</button>
+      <button class="nav-btn" data-section="subjekt">Subjekt</button>
+      <button class="nav-btn" data-section="objekt">Objektarten</button>
+      <button class="nav-btn" data-section="adverbial">Adverbiale</button>
+      <button class="nav-btn" data-section="praedikativ">Prädikative</button>
+      <button class="nav-btn" data-section="valenz">Valenz</button>
+      <button class="nav-btn" data-section="angaben">Ergänzungen / Angaben</button>
+      <button class="nav-btn" data-section="attribute">Attribute</button>
+      <button class="nav-btn" data-section="konstituenten">Konstituenten</button>
+      <button class="nav-btn" data-section="ambiguitaet">Ambiguität</button>
+      <button class="nav-btn" data-section="revision">Schlussrevision</button>
+
+      <div class="tips">
+        <h3>Verbenhilfe</h3>
+        <p>Die deutschen Verben können angezeigt werden. Die französische Bedeutung steht versteckt in Klammern.</p>
+        <button class="secondary full" id="toggle-verbs">Verben anzeigen</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section id="intro" class="page-section visible">
+        <article class="panel">
+          <h2>Ziel</h2>
+          <p>
+            Diese Website nimmt die Übungen aus Sitzung 3 auf und macht daraus ein Training.
+            Die Seite bleibt auf Deutsch, damit du prüfungsnah arbeitest. Französische
+            Übersetzungen der wichtigsten Verben sind nur als Hilfe versteckt.
+          </p>
+          <div class="method-grid">
+            <div>
+              <h3>Form ≠ Funktion</h3>
+              <p>Eine Phrase ist eine Form: NP, PP, VP, AdjP, AdvP. Ein Satzglied hat eine Funktion: Subjekt, Objekt, Adverbial, Prädikativ.</p>
+            </div>
+            <div>
+              <h3>Objektarten</h3>
+              <p>Akkusativ-, Dativ-, Genitiv- und Präpositionalobjekte werden durch die Valenz des Verbs bestimmt.</p>
+            </div>
+            <div>
+              <h3>Tests</h3>
+              <p>Fragetest, Pronominalisierungstest, Vorfeldtest und Verschiebetest helfen, Satzglieder zu erkennen.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel verb-panel hidden" id="verb-panel">
+          <h2>Verbenhilfe <span class="small-fr">(traductions françaises cachées)</span></h2>
+          <div id="verb-list" class="verb-list"></div>
+        </article>
+      </section>
+
+      <section id="satzglied" class="page-section"></section>
+      <section id="subjekt" class="page-section"></section>
+      <section id="objekt" class="page-section"></section>
+      <section id="adverbial" class="page-section"></section>
+      <section id="praedikativ" class="page-section"></section>
+      <section id="valenz" class="page-section"></section>
+      <section id="angaben" class="page-section"></section>
+      <section id="attribute" class="page-section"></section>
+      <section id="konstituenten" class="page-section"></section>
+      <section id="ambiguitaet" class="page-section"></section>
+      <section id="revision" class="page-section"></section>
+    </section>
+  </main>
+
+  <template id="exercise-template">
+    <article class="exercise-card">
+      <div class="exercise-head">
+        <div>
+          <p class="tag"></p>
+          <h3></h3>
+        </div>
+        <span class="type-pill"></span>
+      </div>
+      <p class="question"></p>
+      <div class="exercise-body"></div>
+      <div class="actions">
+        <button class="primary check-btn">Korrigieren</button>
+        <button class="secondary reset-btn">Neu beginnen</button>
+        <button class="ghost solution-btn">Lösung anzeigen</button>
+      </div>
+      <div class="feedback"></div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

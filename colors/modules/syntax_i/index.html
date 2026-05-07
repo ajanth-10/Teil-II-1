@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deutschtraining — Linguistik II</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Einführung in die germanistische Linguistik II</p>
+      <h1>Übungsseite — Syntax I</h1>
+      <p class="subtitle">
+        Interaktive Übungen zu Wortarten, Adjektiven, Pronomen, Artikeln,
+        Verben, Passivformen, Modalverben, Halbmodalverben und Kopulaverben.
+      </p>
+    </div>
+    <div class="score-card">
+      <span>Punktzahl</span>
+      <strong id="global-score">0 / 0</strong>
+      <small id="progress-text">Noch keine Übung korrigiert</small>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <button class="nav-btn active" data-section="intro">Methode</button>
+      <button class="nav-btn" data-section="prep">Vorbereitung</button>
+      <button class="nav-btn" data-section="substantive">Substantive</button>
+      <button class="nav-btn" data-section="adjectifs">Adjektive</button>
+      <button class="nav-btn" data-section="pronoms">Pronomen & Artikel</button>
+      <button class="nav-btn" data-section="verbes">Verben</button>
+      <button class="nav-btn" data-section="passif">Passiv</button>
+      <button class="nav-btn" data-section="modalverben">Modalverben</button>
+      <button class="nav-btn" data-section="halbmodal">Halbmodalverben</button>
+      <button class="nav-btn" data-section="kopula">Kopulaverben</button>
+      <button class="nav-btn" data-section="revision">Schlussrevision</button>
+
+      <div class="tips">
+        <h3>Arbeitsweise</h3>
+        <p>1. Bearbeite die Übung zuerst ohne Lösung.</p>
+        <p>2. Klicke auf „Korrigieren“.</p>
+        <p>3. Lies die Erklärung und versuche es nochmals.</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section id="intro" class="page-section visible">
+        <article class="panel">
+          <h2>Ziel</h2>
+          <p>
+            Diese Website nimmt die Übungen aus den Kursunterlagen auf und verwandelt sie
+            in ein interaktives Training. Du kannst Antworten schreiben, Optionen auswählen
+            und die Lösungen direkt überprüfen.
+          </p>
+          <div class="method-grid">
+            <div>
+              <h3>Distribution</h3>
+              <p>Man beobachtet, wo ein Wort im Satz steht und mit welchen Wörtern es kombiniert wird.</p>
+            </div>
+            <div>
+              <h3>Morphologie</h3>
+              <p>Man beobachtet Flexionsmerkmale: Verbendung, Deklination, Kasus, Genus und Numerus.</p>
+            </div>
+            <div>
+              <h3>Achtung</h3>
+              <p>Eine Antwort kann teilweise richtig sein. Lies dann die Erklärung, bevor du weiterarbeitest.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="prep" class="page-section"></section>
+      <section id="substantive" class="page-section"></section>
+      <section id="adjectifs" class="page-section"></section>
+      <section id="pronoms" class="page-section"></section>
+      <section id="verbes" class="page-section"></section>
+      <section id="passif" class="page-section"></section>
+      <section id="modalverben" class="page-section"></section>
+      <section id="halbmodal" class="page-section"></section>
+      <section id="kopula" class="page-section"></section>
+      <section id="revision" class="page-section"></section>
+    </section>
+  </main>
+
+  <template id="exercise-template">
+    <article class="exercise-card">
+      <div class="exercise-head">
+        <div>
+          <p class="tag"></p>
+          <h3></h3>
+        </div>
+        <span class="type-pill"></span>
+      </div>
+      <p class="question"></p>
+      <div class="exercise-body"></div>
+      <div class="actions">
+        <button class="primary check-btn">Korrigieren</button>
+        <button class="secondary reset-btn">Neu beginnen</button>
+        <button class="ghost solution-btn">Lösung anzeigen</button>
+      </div>
+      <div class="feedback"></div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

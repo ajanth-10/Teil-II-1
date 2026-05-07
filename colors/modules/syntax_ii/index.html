@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deutschtraining — Syntax II</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Einführung in die germanistische Linguistik II</p>
+      <h1>Übungsseite — Syntax II</h1>
+      <p class="subtitle">
+        Interaktive Übungen zu unflektierbaren Wortarten, Adverbien, Adpositionen,
+        Konjunktionen, Partikeln, Phrasentypen, Verbalphrasen und Konstituentenstruktur.
+      </p>
+    </div>
+    <div class="score-card">
+      <span>Punktzahl</span>
+      <strong id="global-score">0 / 0</strong>
+      <small id="progress-text">Noch keine Übung korrigiert</small>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <button class="nav-btn active" data-section="intro">Methode</button>
+      <button class="nav-btn" data-section="adverbien">Adverbien</button>
+      <button class="nav-btn" data-section="adpositionen">Adpositionen</button>
+      <button class="nav-btn" data-section="konjunktionen">Konjunktionen</button>
+      <button class="nav-btn" data-section="partikeln">Partikeln</button>
+      <button class="nav-btn" data-section="phrasen">Phrasen</button>
+      <button class="nav-btn" data-section="attribute">Attribute</button>
+      <button class="nav-btn" data-section="rektion">Rektion</button>
+      <button class="nav-btn" data-section="vp">Verbalphrasen</button>
+      <button class="nav-btn" data-section="konstituenten">Konstituenten</button>
+      <button class="nav-btn" data-section="revision">Schlussrevision</button>
+
+      <div class="tips">
+        <h3>Verbenhilfe</h3>
+        <p>Die deutschen Verben können angezeigt werden. Die französische Bedeutung steht versteckt in Klammern.</p>
+        <button class="secondary full" id="toggle-verbs">Verben anzeigen</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section id="intro" class="page-section visible">
+        <article class="panel">
+          <h2>Ziel</h2>
+          <p>
+            Diese Website nimmt die Übungen aus Sitzung 2 auf und macht daraus ein Training.
+            Die Seite bleibt auf Deutsch, damit du prüfungsnah arbeitest. Die französischen
+            Bedeutungen der Verben sind nur als Hilfe versteckt.
+          </p>
+          <div class="method-grid">
+            <div>
+              <h3>Unflektierbare Wortarten</h3>
+              <p>Adverbien, Präpositionen, Konjunktionen, Partikeln und Interjektionen sind nicht flektierbar.</p>
+            </div>
+            <div>
+              <h3>Phrasen</h3>
+              <p>Eine Phrase ist eine syntaktisch zusammengehörige Wortgruppe. Der Kopf bestimmt den Phrasentyp.</p>
+            </div>
+            <div>
+              <h3>Konstituententests</h3>
+              <p>Fragetest, Pronominalisierungstest, Verschiebetest und Vorfeldtest helfen, Satzbestandteile zu bestimmen.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel verb-panel hidden" id="verb-panel">
+          <h2>Verbenhilfe <span class="small-fr">(traductions françaises cachées)</span></h2>
+          <div id="verb-list" class="verb-list"></div>
+        </article>
+      </section>
+
+      <section id="adverbien" class="page-section"></section>
+      <section id="adpositionen" class="page-section"></section>
+      <section id="konjunktionen" class="page-section"></section>
+      <section id="partikeln" class="page-section"></section>
+      <section id="phrasen" class="page-section"></section>
+      <section id="attribute" class="page-section"></section>
+      <section id="rektion" class="page-section"></section>
+      <section id="vp" class="page-section"></section>
+      <section id="konstituenten" class="page-section"></section>
+      <section id="revision" class="page-section"></section>
+    </section>
+  </main>
+
+  <template id="exercise-template">
+    <article class="exercise-card">
+      <div class="exercise-head">
+        <div>
+          <p class="tag"></p>
+          <h3></h3>
+        </div>
+        <span class="type-pill"></span>
+      </div>
+      <p class="question"></p>
+      <div class="exercise-body"></div>
+      <div class="actions">
+        <button class="primary check-btn">Korrigieren</button>
+        <button class="secondary reset-btn">Neu beginnen</button>
+        <button class="ghost solution-btn">Lösung anzeigen</button>
+      </div>
+      <div class="feedback"></div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
